@@ -1,0 +1,67 @@
+<html onkeydown="showKey(event)" style="background-color: #FAFAD2;">
+
+<head>
+  <!-- title of the app -->
+  <script src="calc.js"></script>
+  <link rel="stylesheet" type="text/css" href="calc.css">
+<title> Calculator </title>
+</head>
+
+<body>
+  <!--put the whole calculator inside of a form
+  put a table inside of the form for the buttons -->
+  <!-- name of the form is buttons -->
+  <div id="contain">
+<form name="buttons">
+  <!--screen for the numbers will be readonly
+  use 'readonly' for not letting users enter a numbers
+  name of the screen has to be called when clicking a button -->
+  <input type="text" name="screen" id="numberScreen" placeholder="0" readonly>
+  <!--table inside of form for buttons -->
+  <table id="myTable">
+    <!-- sort buttons with tr to make a row
+    close tr tag after 3 buttons created -->
+    <tr style="border: 2px solid black">
+    <tr>
+  <td><input type="button" class="buttonStyle" value="1" onClick="one();"></td>
+  <td><input type="button" class="buttonStyle" value="2" onClick="two();"></td>
+  <td><input type="button" class="buttonStyle" value="3" onClick="three();"></td>
+</tr> <!-- closing tag for table row -->
+    <tr>
+  <td><input type="button" class="buttonStyle" value="4" onClick="four();"></td>
+  <td><input type="button" class="buttonStyle" value="5" onClick="five();"></td>
+  <td><input type="button" class="buttonStyle" value="6" onClick="six();"></td>
+</tr>
+<tr>
+  <td><input type="button" class="buttonStyle" value="7" onClick="seven();"></td>
+  <td><input type="button" class="buttonStyle" value="8" onClick="eight();"></td>
+  <td><input type="button" class="buttonStyle" value="9" onClick="nine();"></td>
+</tr>
+<tr>
+  <td><input type="button" class="buttonStyle" id="adding" value="+" onClick="add();"></td>
+  <td><input type="button" class="buttonStyle" value="0" onClick="zero();"></td>
+  <td><input type="button" class="buttonStyle" id="subtracting" value="-" onClick="subtract();"></td>
+</tr>
+<tr><!--addition and subtraction buttons in seperate table -->
+
+
+  <td><input type="button" class="buttonStyle" id="dividing" value="/" onClick="divide();"></td>
+  <td><input type="button" class="buttonStyle" id="multiplying" value="*" onClick="multi();"></td>
+  <td><input type="button" class="buttonStyle" id="equals" value="=" onClick="equal();"></td>
+</tr>
+</table>
+<table>
+<tr>
+  <td><input type="reset" class="buttonStyle" value="Clear"></td>
+  <td><input type="button" class="delete" value="Delete" onclick="deleteChar();"></td>
+</tr>
+<!--adds the operations: = sign-->
+
+<!--delete character -->
+</tr>
+</table>
+</form>
+</div>
+
+</body>
+</html>
